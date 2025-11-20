@@ -1,0 +1,83 @@
+:root {
+    --primary: #2f80ed; /* bleu */
+    --text: #000;
+    --muted: #e57373; /* texte du titre rosé */
+    --bg: #f4f4f4;
+    --radius: 15px;
+  }
+  
+  .card {
+    width: 300px;
+    background: var(--bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Barre bleue en haut */
+  .card-bar {
+    height: 12px;
+    background: var(--primary);
+    background-color:   #4DB6AC;
+    ;
+  }
+  
+  /* Corps */
+  .card-body {
+    padding: 20px;
+    background-color: rgb(232, 232, 232);
+
+  }
+  
+  /* Header avec icône + titre */
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .card-icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e57373;
+    margin: 0;
+  }
+  
+  /* Texte */
+  .card-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 0 0 20px;
+    line-height: 1.5;
+  }
+  
+  /* Bouton bleu */
+  .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .btn {
+    background:  #4DB6AC;
+  }
+  .lign{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 5em;
+  }

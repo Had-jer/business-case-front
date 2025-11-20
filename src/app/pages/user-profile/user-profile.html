@@ -1,0 +1,107 @@
+<div class="container">
+
+  <h2>Bienvenue {{ user.last_name }}</h2>
+
+  <!-- 🚀 Layout 2 colonnes -->
+  <div class="profile-layout">
+
+    <!--  Infos utilisateur -->
+    <div class="left-column">
+
+      <div class="doctor-button-container">
+        @if (user.status === 'doctor') {
+          <button class="create-event-btn" (click)="goToMedicalEvent()">
+            Ajouter un événement médical
+          </button>
+        }
+      </div>
+
+      <!-- EMAIL -->
+      <div class="profile-item">
+        <label>Email</label>
+
+        @if (editingField !== 'email') {
+          <span>{{ user.email }}</span>
+          <button class="modify-btn" (click)="editField('email')">Modifier</button>
+        }
+
+        @if (editingField === 'email') {
+          <input [(ngModel)]="newValue" />
+          <button class="ok-btn" (click)="saveField()">OK</button>
+          <button class="cancel-btn" (click)="cancelEdit()">Annuler</button>
+        }
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="profile-item">
+        <label>Mot de passe</label>
+
+        @if (editingField !== 'password') {
+          <span>********</span>
+          <button class="modify-btn" (click)="editField('password')">Modifier</button>
+        }
+
+        @if (editingField === 'password') {
+          <input type="password" [(ngModel)]="newValue" />
+          <button class="ok-btn" (click)="saveField()">OK</button>
+          <button class="cancel-btn" (click)="cancelEdit()">Annuler</button>
+        }
+      </div>
+
+      <!-- PHONE -->
+      <div class="profile-item">
+        <label>N° de téléphone</label>
+
+        @if (editingField !== 'phone_number') {
+          <span>{{ user.phone_number }}</span>
+          <button class="modify-btn" (click)="editField('phoneNumber')">Modifier</button>
+        }
+
+        @if (editingField === 'phone_number') {
+          <input type="tel" [(ngModel)]="newValue" />
+          <button class="ok-btn" (click)="saveField()">OK</button>
+          <button class="cancel-btn" (click)="cancelEdit()">Annuler</button>
+        }
+      </div>
+
+      @if (successMessage) {
+        <div class="success-message">{{ successMessage }}</div>
+      }
+
+      @if (errorMessage) {
+        <div class="error-message">{{ errorMessage }}</div>
+      }
+
+      <!-- LOGOUT -->
+      <div class="logout-container">
+        <button class="logout-btn" (click)="logout()">Déconnexion</button>
+      </div>
+
+      <!-- Delete Account -->
+      <div class="delete-account-container">
+        <button class="delete-account-btn" (click)="deleteAccount()">
+          Supprimer le compte
+        </button>
+      </div>
+
+    </div>
+<!-- ==================== ÉVÉNEMENTS MÉDICAUX DU PATIENT ==================== -->
+<div class="events-section">
+
+  <h3>Mes événements médicaux</h3>
+
+  @if (medicalEvents.length === 0) {
+    <p class="empty">Aucun événement médical trouvé.</p>
+  }
+
+  @for (event of medicalEvents; track event.id) {
+    <div class="event-card" (click)="viewEvent(event.id)">
+      <div class="event-info">
+        <p><strong>Catégorie :</strong> {{ event.eventCategory }}</p>
+        <p><strong>Statut :</strong> {{ event.status }}</p>
+        <p><strong>Date :</strong> {{ event.date | date:'dd/MM/yyyy' }}</p>
+      </div>
+    </div>
+  }
+
+</div>

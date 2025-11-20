@@ -1,4 +1,70 @@
-h1{
-    font-weight: 1000;
-   /* color:#6BCB77 ;  */
+/* ===== NAVBAR BACKGROUND ===== */
+.navbar-header {
+  background-color: #4DB6AC;
+  color: white;
+}
+
+/* ===== TITRE ===== */
+.navbar-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0e312e !important;   /* ton vert foncé */
+}
+
+/* ===== BOUTONS ===== */
+.navbar-btn {
+  padding: 0.75rem 2rem;
+  background-color: white;        /* boutons blancs */
+  border: 2px solid #0e312e;      /* bordure verte */
+  color: #0e312e;                 /* texte vert */
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Effet hover : texte blanc, fond vert */
+.navbar-btn:hover {
+  background-color: #0e312e;
+  color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* MOBILE (max 640px) */
+@media (max-width: 640px) {
+
+  header .container {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header .container > div:first-child {
+    justify-content: center;
+    width: 100%;
+  }
+
+  header .container .flex.items-center {
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .navbar-btn {
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+/* TABLETTE (641px à 900px) */
+@media (min-width: 641px) and (max-width: 900px) {
+  header .container {
+    padding: 0 1rem;
+  }
+
+  .navbar-btn {
+    padding: 0.6rem 1.6rem;
+  }
 }

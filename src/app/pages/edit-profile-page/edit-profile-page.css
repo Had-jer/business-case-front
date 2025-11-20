@@ -1,0 +1,108 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+.edit-container {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .edit-container h2 {
+    color: #f0afa9;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  
+  /* ===== FORMULAIRE ===== */
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  /* Style des inputs inspiré du profil */
+  .edit-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #299A8F;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.2s ease;
+  }
+  
+  .edit-form input:focus {
+    border-color: #24776F;
+    box-shadow: 0 0 5px rgba(36, 119, 111, 0.4);
+  }
+  
+  /* ===== BOUTON ENREGISTRER ===== */
+  .save-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #299A8F;
+    border: 1px solid #24776F;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .save-btn:hover {
+    background-color: #24776F;
+  }
+  
+  /* ===== MESSAGES ===== */
+  .success-message {
+    color: green;
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    .edit-container {
+      width: 90%;
+      margin: 15px auto;
+    }
+  
+    .save-btn {
+      padding: 14px;
+    }
+  }
+  .buttons-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .back-btn,
+  .logout-btn {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid #24776F;
+    background-color: #299A8F;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .back-btn:hover,
+  .logout-btn:hover {
+    background-color: #24776F;
+  }
+  
+  

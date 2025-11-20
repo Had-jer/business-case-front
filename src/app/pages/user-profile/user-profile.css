@@ -1,0 +1,241 @@
+/* ===== HEADER ===== */
+header {
+  background-color: #6fb3ad;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+  max-width: 500px;
+  margin: 25px auto;      /* 🔥 ESPACE RÉDUIT sous Bienvenue */
+  text-align: center;
+}
+
+.container h2 {
+  color: #f0afa9;
+  font-weight: bold;
+  margin-bottom: 20px;   
+}
+
+/* ===== BOUTON DOCTOR ===== */
+.doctor-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;  
+}
+
+.create-event-btn {
+  padding: 0.6rem 2rem;
+  border-radius: 12px;
+  border: 1px solid #24776F;
+  background-color: #299A8F;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-event-btn:hover {
+  background-color: #24776F;
+}
+
+/* ===== PROFIL ITEMS ===== */
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 12px;        /* 🔥 réduit */
+  gap: 1rem;
+}
+
+.profile-item label {
+  font-weight: bold;
+}
+
+.profile-item span {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-item input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #299A8F;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.profile-item input:focus {
+  border-color: #24776F;
+  box-shadow: 0 0 5px rgba(36, 119, 111, 0.4);
+}
+
+/* ===== BOUTONS ORIGINAUX (pas modifiés !) ===== */
+.modify-btn {
+  padding: 0.5rem 1.4rem;
+  border-radius: 12px;
+  border: 1px solid #24776F;
+  background-color: #299A8F;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modify-btn:hover {
+  background-color: #24776F;
+}
+
+.ok-btn,
+.cancel-btn {
+  padding: 0.5rem 1.4rem;
+  border-radius: 50px;
+  border: 1px solid #24776F;
+  background-color: #299A8F;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 90px;
+}
+
+.ok-btn:hover,
+.cancel-btn:hover {
+  background-color: #24776F;
+}
+
+.logout-btn {
+  padding: 0.6rem 2rem;
+  background-color: #299A8F;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid #24776F;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background-color: #24776F;
+}
+
+.delete-account-btn {
+  padding: 0.7rem 2rem;
+  background-color: #299A8F;     /* ✔ même vert que les autres */
+  color: white;
+  border-radius: 12px;
+  border: 1px solid #24776F;     /* ✔ même bordure */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-account-btn:hover {
+  background-color: #24776F;     /* ✔ hover identique */
+}
+
+/* ===== EVENTS LIST ===== */
+.events-section {
+  margin-top: 25px;        
+}
+
+.events-section h3 {
+  color: #299A8F;
+  margin-bottom: 15px;
+}
+
+.event-card {
+  background: white;
+  border: 1px solid #cfcfcf;
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+
+.event-info p {
+  margin: 4px 0;
+}
+
+.event-info strong {
+  color: #24776F;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 15px auto;  /* 🔥 encore plus compact sur mobile */
+  }
+
+  .profile-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .create-event-btn,
+  .logout-btn,
+  .delete-account-btn {
+    width: 100%;
+  }
+
+  .event-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.modify-btn,
+.ok-btn,
+.cancel-btn,
+.logout-btn,
+.delete-account-btn {
+  margin: 0.5rem 0;   /* 👍 marge responsive verticale */
+}
+.events-section {
+  margin-top: 25px;
+}
+
+.events-section h3 {
+  color: #299A8F;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.event-card {
+  background: white;
+  border: 1px solid #cfcfcf;
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.10);
+}
+
+.event-info p {
+  margin: 4px 0;
+}
+
+.event-info strong {
+  color: #24776F;
+}
+

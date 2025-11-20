@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SinscrirePage } from './sinscrire';
 
-import { Messagerie } from './messagerie';
-
-describe('Messagerie', () => {
-  let component: Messagerie;
-  let fixture: ComponentFixture<Messagerie>;
+describe('SinscrirePage', () => {
+  let component: SinscrirePage;
+  let fixture: ComponentFixture<SinscrirePage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Messagerie]
+      imports: [SinscrirePage]  // Composant standalone
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Messagerie);
+    fixture = TestBed.createComponent(SinscrirePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

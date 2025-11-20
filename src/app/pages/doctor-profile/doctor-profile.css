@@ -1,0 +1,274 @@
+/* Container global */
+.doctor-profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Inter, sans-serif;
+}
+
+/* Header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #6fb3ad;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #299A8F;
+    border-radius: 10px;
+    border: 1px solid #24776F;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #24776F;
+}
+
+/* Doctor infos card */
+.doctor-info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+    border: 1px solid #cfcfcf;
+}
+
+.doctor-info-card h3 {
+    margin-bottom: 20px;
+    color: #299A8F;
+}
+
+.info-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.label {
+    font-weight: bold;
+    color: #24776F;
+}
+
+/* TITRE événements */
+.events-list-title {
+    text-align: center;
+    color: #f0afa9;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------- */
+/*            GRID DES EVENTS – 4 par ligne               */
+/* ------------------------------------------------------- */
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* ------------------------------------------------------- */
+/*                      CARDS EVENTS                      */
+/* ------------------------------------------------------- */
+.event-card {
+    width: 200px;      /* PLUS LARGE */
+    height: 200px;     /* idem pour garder le carré */
+    background: white;
+    border: 1px solid #299A8F;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.event-card h4 {
+    color: #24776F;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+/* ------------------------------------------------------- */
+/*          Bouton Modifier dans les Cards                */
+/* ------------------------------------------------------- */
+.edit-event-btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #24776F;
+    background-color: #299A8F;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.edit-event-btn:hover {
+    background-color: #24776F;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------- */
+/* 📱 RESPONSIVE GRILLE • AUTO : 4 → 3 → 2 → 1            */
+/* ------------------------------------------------------- */
+
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* 3 par ligne (tablettes) */
+@media (max-width: 1000px) {
+    .events-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 2 par ligne (mobiles larges) */
+@media (max-width: 700px) {
+    .events-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 par ligne (petit mobile) */
+@media (max-width: 450px) {
+    .events-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* ------------------------------------------------------- */
+/*               POPUP / MODAL STYLÉ                     */
+/* ------------------------------------------------------- */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-box {
+    background: white;
+    width: 90%;
+    max-width: 320px;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.popup-box h3 {
+    margin-bottom: 15px;
+    color: #299A8F;
+}
+
+.popup-box select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #299A8F;
+    margin-bottom: 20px;
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    background-color: #299A8F;
+    border: 1px solid #24776F;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.save-btn:hover,
+.cancel-btn:hover {
+    background-color: #24776F;
+}
+.doctor-actions .edit-btn,
+.doctor-actions .delete-btn {
+    padding: 12px 28px;
+    background-color: #299A8F;
+    border: 1px solid #24776F;
+    color: white;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 1rem;
+    
+}
+
+/* .doctor-actions .edit-btn:hover,
+.doctor-actions .delete-btn:hover {
+    background-color: #24776F;
+    margin-left: 2rem;
+    
+} */
+.doctor-actions {
+        margin-top: 40px;   /* plus d'espace entre la section infos et les boutons */
+        display: flex;
+        gap: 2rem;          /* augmente l’espace ENTRE les deux boutons */
+        justify-content: center;
+    }
+    .create-event-btn {
+        padding: 0.6rem 2rem;
+        border-radius: 12px;
+        border: 1px solid #24776F;
+        background-color: #299A8F;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%; /* pour qu'il soit bien visible sous les autres */
+        margin-top: 10px;
+      }
+      
+      .create-event-btn:hover {
+        background-color: #24776F;
+      }
+      

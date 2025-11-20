@@ -1,0 +1,61 @@
+<div class="container">
+    <h2>Créer un événement médical</h2>
+  
+    <form (submit)="submitEvent($event)" class="form-box">
+  
+      <!-- Patient ID (sans flèches) -->
+      <label>Patient ID</label>
+      <input
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        [(ngModel)]="patientId"
+        name="patientId"
+        required
+        class="no-arrows"
+      />
+  
+      <!-- Date -->
+      <label>Date</label>
+      <input
+        type="date"
+        [(ngModel)]="date"
+        name="date"
+        required
+      />
+  
+      <!-- Status -->
+      <label>Status</label>
+      <select [(ngModel)]="status" name="status" required>
+        <option value="scheduled">Scheduled</option>
+        <option value="done">Done</option>
+        <option value="canceled">Canceled</option>
+      </select>
+  
+      <!-- Category -->
+      <label>Category</label>
+      <select [(ngModel)]="eventCategory" name="eventCategory" required>
+        <option value="hospitalisation">Hospitalisation</option>
+        <option value="consultation">Consultation</option>
+        <option value="operation">Opération</option>
+  
+        <!-- ⭐ NOUVELLES CATÉGORIES -->
+        <option value="platre-attelle">Pose de plâtre ou d'attelle</option>
+        <option value="kinesitherapie">Séance de kinésithérapie</option>
+        <option value="chimiotherapie">Séance de chimiothérapie</option>
+        <option value="radiotherapie">Séance de radiothérapie</option>
+        <option value="vaccination">Vaccination</option>
+      </select>
+  
+      <button class="submit-btn" type="submit">Créer l'événement</button>
+    </form>
+  
+    @if (successMessage) {
+      <div class="success">{{ successMessage }}</div>
+    }
+  
+    @if (errorMessage) {
+      <div class="error">{{ errorMessage }}</div>
+    }
+  </div>
+  

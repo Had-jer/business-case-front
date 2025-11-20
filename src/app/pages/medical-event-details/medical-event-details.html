@@ -1,0 +1,26 @@
+@if (event) {
+
+    <div class="details-container">
+  
+      <h2>Événement médical</h2>
+  
+      <p><strong>Catégorie :</strong> {{ event.eventCategory }}</p>
+      <!-- <p><strong>Date :</strong> {{ event.date | date }}</p> -->
+      <p><strong>Statut :</strong> {{ event.status }}</p>
+  
+      <h3>Patient</h3>
+      <p>{{ event.patient.first_name }} {{ event.patient.last_name }}</p>
+  
+      <h3>Docteur</h3>
+      <p>{{ event.doctor.first_name }} {{ event.doctor.last_name }}</p>
+  
+    </div>
+  
+  } @else {
+  
+    @if (errorMessage) {
+      <p class="error">{{ errorMessage }}</p>
+    }
+  
+  }
+  

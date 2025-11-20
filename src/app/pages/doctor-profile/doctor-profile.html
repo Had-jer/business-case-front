@@ -1,0 +1,87 @@
+<div class="doctor-profile-container">
+
+    <!-- HEADER -->
+    <header class="profile-header">
+      <h2>Profil Médecin</h2>
+      <button class="logout-btn" (click)="logout()">Déconnexion</button>
+    </header>
+  
+    <!-- INFOS -->
+    <section class="doctor-info-card">
+      <h3>Informations personnelles</h3>
+  
+      <div class="info-line">
+        <span class="label">Nom :</span>
+        <span>{{ user.last_name }} {{ user.first_name }}</span>
+      </div>
+  
+      <div class="info-line">
+        <span class="label">Email :</span>
+        <span>{{ user.email }}</span>
+      </div>
+  
+      <div class="info-line">
+        <span class="label">Téléphone :</span>
+        <span>{{ user.phone_number }}</span>
+      </div>
+  
+      <div class="info-line">
+        <span class="label">Statut :</span>
+        <span>{{ user.status }}</span>
+      </div>
+  
+  
+  
+    </section>
+  
+    <!-- 🔵 BOUTONS ACTIONS GLOBAL (en dehors de la card) -->
+    <div class="doctor-actions">
+        <button class="edit-btn" (click)="goEditProfile()">Modifier le profil</button>
+        <button class="delete-btn" (click)="deleteAccount()">Supprimer compte</button>
+        <button class="create-event-btn" (click)="goToMedicalEvent()">
+            Ajouter un événement médical
+          </button>
+    </div>
+  
+  </div>
+  <section class="events-list">
+
+  
+    @if (medicalEvents.length === 0) {
+      <p class="empty">Aucun événement pour le moment.</p>
+    }
+  
+    @for (event of medicalEvents; track event.id) {
+        <div class="event-card" (click)="viewEvent(event.id)">
+            <h4>{{ event.eventCategory }}</h4>
+            <p><strong>Statut :</strong> {{ event.status }}</p>
+            <button class="edit-event-btn" (click)="openEditPopup(event); $event.stopPropagation()">Modifier</button>
+        </div>
+          
+    }
+  
+  </section>
+  <!-- ==================== MODAL POPUP ==================== -->
+@if (showPopup) {
+    <div class="popup-overlay">
+      <div class="popup-box">
+    
+        <h3>Modifier l'événement</h3>
+    
+        <label>Nouveau statut</label>
+        <select [(ngModel)]="selectedStatus">
+          <option value="scheduled">Scheduled</option>
+          <option value="done">Done</option>
+          <option value="canceled">Canceled</option>
+        </select>
+    
+        <div class="popup-actions">
+          <button class="save-btn" (click)="saveStatus()">Enregistrer</button>
+          <button class="cancel-btn" (click)="closePopup()">Annuler</button>
+        </div>
+    
+      </div>
+    </div>
+    }
+    
+  
