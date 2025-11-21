@@ -16,7 +16,6 @@ export class EditProfilePageComponent {
 
   email: string = '';
   phone_number: string = '';
-  password: string = '';
 
   successMessage = '';
   errorMessage = '';
@@ -31,7 +30,7 @@ export class EditProfilePageComponent {
     this.api.getProfile().subscribe({
       next: (user) => {
         this.email = user.email;
-        this.phone_number = user.phoneNumber;  // <-- correct
+        this.phone_number = user.phoneNumber;  
       }
     });
   }
@@ -41,12 +40,10 @@ export class EditProfilePageComponent {
   
     const data: any = {
       email: this.email,
-      phoneNumber: this.phone_number   // <-- CORRECT POUR SYMFONY
+      phoneNumber: this.phone_number  
     };
   
-    if (this.password.trim() !== '') {
-      data.plainPassword = this.password;  // <-- CORRECT POUR SYMFONY
-    }
+  
   
     console.log("DATA SENT :", data);
   

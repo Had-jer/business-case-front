@@ -1,4 +1,4 @@
-/* ===== HEADER ===== */
+/*  HEADER */
 header {
   background-color: #6fb3ad;
   padding: 20px;
@@ -13,20 +13,21 @@ header h1 {
   color: #fff;
 }
 
-/* ===== CONTAINER PRINCIPAL ===== */
+/* CONTAINER PRINCIPAL  */
 .container {
   max-width: 500px;
-  margin: 25px auto;      /* 🔥 ESPACE RÉDUIT sous Bienvenue */
+  margin: 25px auto;     
   text-align: center;
 }
 
 .container h2 {
-  color: #f0afa9;
+  color: #de7970;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 20px;   
 }
 
-/* ===== BOUTON DOCTOR ===== */
+/* BOUTON DOCTOR  */
 .doctor-button-container {
   display: flex;
   justify-content: center;
@@ -48,7 +49,7 @@ header h1 {
   background-color: #24776F;
 }
 
-/* ===== PROFIL ITEMS ===== */
+/*  PROFIL ITEMS */
 .profile-item {
   display: flex;
   justify-content: space-between;
@@ -56,7 +57,7 @@ header h1 {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px 20px;
-  margin-bottom: 12px;        /* 🔥 réduit */
+  margin-bottom: 12px;        
   gap: 1rem;
 }
 
@@ -82,7 +83,7 @@ header h1 {
   box-shadow: 0 0 5px rgba(36, 119, 111, 0.4);
 }
 
-/* ===== BOUTONS ORIGINAUX (pas modifiés !) ===== */
+/*  BOUTONS ORIGINAUX */
 .modify-btn {
   padding: 0.5rem 1.4rem;
   border-radius: 12px;
@@ -129,28 +130,25 @@ header h1 {
 
 .delete-account-btn {
   padding: 0.7rem 2rem;
-  background-color: #299A8F;     /* ✔ même vert que les autres */
+  background-color: #299A8F;     
   color: white;
   border-radius: 12px;
-  border: 1px solid #24776F;     /* ✔ même bordure */
+  border: 1px solid #24776F;     
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .delete-account-btn:hover {
-  background-color: #24776F;     /* ✔ hover identique */
+  background-color: #24776F;     
 }
 
-/* ===== EVENTS LIST ===== */
+/* EVENTS LIST */
 .events-section {
   margin-top: 25px;        
 }
 
-.events-section h3 {
-  color: #299A8F;
-  margin-bottom: 15px;
-}
+
 
 .event-card {
   background: white;
@@ -169,11 +167,11 @@ header h1 {
   color: #24776F;
 }
 
-/* ===== RESPONSIVE ===== */
+/*  RESPONSIVE */
 @media (max-width: 600px) {
   .container {
     width: 90%;
-    margin: 15px auto;  /* 🔥 encore plus compact sur mobile */
+    margin: 15px auto; 
   }
 
   .profile-item {
@@ -197,14 +195,14 @@ header h1 {
 .cancel-btn,
 .logout-btn,
 .delete-account-btn {
-  margin: 0.5rem 0;   /* 👍 marge responsive verticale */
+  margin: 0.5rem 0;   
 }
 .events-section {
   margin-top: 25px;
 }
 
 .events-section h3 {
-  color: #299A8F;
+  color: #de7970;
   margin-bottom: 15px;
   text-align: center;
 }

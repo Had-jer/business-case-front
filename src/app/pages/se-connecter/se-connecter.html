@@ -3,7 +3,7 @@
   <div class="w-full max-w-md p-10 space-y-7 bg-white rounded-2xl
               min-h-[540px] flex flex-col justify-center border border-gray-300">
 
-    <h1 class="text-3xl font-medium text-center text-rose-300">
+    <h1 class="text-3xl font-medium text-center" style="color: #de7970;">
       Connexion
     </h1>
 
@@ -21,6 +21,7 @@
 
     <form (submit)="onSubmit($event)" class="space-y-6">
 
+      <!-- EMAIL -->
       <div>
         <label class="block mb-1 text-sm font-medium">Email</label>
         <input
@@ -33,8 +34,9 @@
         />
       </div>
 
+      <!-- MOT DE PASSE -->
       <div>
-        <label class="block mb-1 text-sm font-medium">Password</label>
+        <label class="block mb-1 text-sm font-medium">Mot de passe</label>
         <input
           type="password"
           name="password"
@@ -47,11 +49,11 @@
 
       <div class="flex justify-center">
         <button
-          type="submit"
-          class="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-8 rounded-md transition"
-        >
-          Connexion
-        </button>
+        type="submit"
+        class="btn-connexion text-white font-medium py-3 px-8 rounded-md"
+      >
+        Connexion
+      </button>
       </div>
 
     </form>

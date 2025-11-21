@@ -1,64 +1,4 @@
-/* =========================
-   🌿 CONTAINER PRINCIPAL
-   ========================= */
-   .details-container {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 25px;
-    background: white;
-    border-radius: 14px;
-    border: 1px solid #cfcfcf;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    font-family: Inter, sans-serif;
-    color: #333;
-  }
-  
-  /* =========================
-     🌿 TITRES
-     ========================= */
-  .details-container h2 {
-    text-align: center;
-    color: #f0afa9;
-    margin-bottom: 20px;
-    font-size: 1.7rem;
-  }
-  
-  .details-container h3 {
-    margin-top: 20px;
-    color: #299A8F;
-    font-size: 1.3rem;
-  }
-  
-  /* =========================
-     🌿 PARAGRAPHES
-     ========================= */
-  .details-container p {
-    background: #f8f8f8;
-    padding: 10px 14px;
-    border-radius: 10px;
-    margin-top: 8px;
-    border-left: 4px solid #299A8F;
-    font-size: 1rem;
-  }
-  
-  .details-container strong {
-    color: #24776F;
-  }
-  
-  /* =========================
-     🌿 MESSAGE D’ERREUR
-     ========================= */
-  .error {
-    text-align: center;
-    margin-top: 30px;
-    color: #d62828;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  
-  /* =========================
-     🌿 RESPONSIVE
-     ========================= */
+ /*  RESPONSIVE */
   @media (max-width: 600px) {
     .details-container {
       width: 90%;
@@ -73,4 +13,59 @@
       font-size: 0.95rem;
     }
   }
+  /* CONTAINER PRINCIPAL*/
+   .details-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #cfcfcf;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: Inter, sans-serif;
+    color: #333;
+  }
   
+  /*  TITRES */
+  .details-container h2 {
+    text-align: center;
+    color: #f0afa9;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+  }
+  
+  .details-container h3 {
+    margin-top: 20px;
+    color: #299A8F;
+    font-size: 1.3rem;
+  }
+  
+  /* PARAGRAPHES */
+  .details-container p {
+    background: #f8f8f8;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-top: 8px;
+    border-left: 4px solid #299A8F;
+    font-size: 1rem;
+  }
+  
+  .details-container strong {
+    color: #24776F;
+  }
+  
+  /* MESSAGE D’ERREUR*/
+  .error {
+    text-align: center;
+    margin-top: 30px;
+    color: #d62828;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+ 
+  /* titre en rose   */
+.title-rose,
+.label-rose {
+  color: #de7970 !important;
+}

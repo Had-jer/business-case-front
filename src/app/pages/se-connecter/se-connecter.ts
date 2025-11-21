@@ -39,11 +39,11 @@ export class SeConnecter {
         this.api.getProfile().subscribe({
           next: (user) => {
   
-            // ✔ afficher message success
+            // afficher le success message 
             this.successMessage = "Connexion réussie ✔";
             this.errorMessage = "";
   
-            // ✔ attendre 1.2s puis rediriger
+            // attendre un peu puis rediriger 
             setTimeout(() => {
               if (user.status === "doctor") {
                 this.router.navigate(['/doctor/profile']);

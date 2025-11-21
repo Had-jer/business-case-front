@@ -22,7 +22,7 @@ export class Api {
   }
   getProfile(): Observable<any> {
     return this.http.get(`${this.baseUrl}/profile`);
-    
+
   }
   updateProfile(data: any) {
     return this.http.patch(`${this.baseUrl}/profile`, data);
@@ -43,8 +43,5 @@ export class Api {
     return this.http.get(`http://localhost:8000/api/medicalEvent/${id}`);
   }
 
-  // Supprimer un event
-  deleteMedicalEvent(id: number) {
-    return this.http.delete(`${this.baseUrl}/medicalEvent/delete/${id}`);
-  }
+
 }

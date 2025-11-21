@@ -61,7 +61,7 @@
     color: #24776F;
 }
 
-/* TITRE événements */
+/* TITRE events */
 .events-list-title {
     text-align: center;
     color: #f0afa9;
@@ -70,9 +70,7 @@
     font-weight: 600;
 }
 
-/* ------------------------------------------------------- */
-/*            GRID DES EVENTS – 4 par ligne               */
-/* ------------------------------------------------------- */
+/* Grdi des events ( 4 par ligne) */
 .events-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -81,12 +79,10 @@
     margin-top: 20px;
 }
 
-/* ------------------------------------------------------- */
-/*                      CARDS EVENTS                      */
-/* ------------------------------------------------------- */
+/* Card events*/
 .event-card {
-    width: 200px;      /* PLUS LARGE */
-    height: 200px;     /* idem pour garder le carré */
+    width: 200px;      
+    height: 200px;     
     background: white;
     border: 1px solid #299A8F;
     border-radius: 14px;
@@ -113,9 +109,7 @@
     font-size: 1rem;
 }
 
-/* ------------------------------------------------------- */
-/*          Bouton Modifier dans les Cards                */
-/* ------------------------------------------------------- */
+/* Bouton modifier dans cards  */
 .edit-event-btn {
     padding: 8px 16px;
     border-radius: 10px;
@@ -135,9 +129,7 @@
     transform: translateY(-2px);
 }
 
-/* ------------------------------------------------------- */
-/* 📱 RESPONSIVE GRILLE • AUTO : 4 → 3 → 2 → 1            */
-/* ------------------------------------------------------- */
+/*responsive grille auto 4-> 3 ->2 -> 1*/
 
 .events-list {
     display: grid;
@@ -170,9 +162,7 @@
 
 
 
-/* ------------------------------------------------------- */
-/*               POPUP / MODAL STYLÉ                     */
-/* ------------------------------------------------------- */
+/* POPPUP MEDICALEVENT */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -244,16 +234,11 @@
     
 }
 
-/* .doctor-actions .edit-btn:hover,
-.doctor-actions .delete-btn:hover {
-    background-color: #24776F;
-    margin-left: 2rem;
-    
-} */
+
 .doctor-actions {
-        margin-top: 40px;   /* plus d'espace entre la section infos et les boutons */
+        margin-top: 40px;  
         display: flex;
-        gap: 2rem;          /* augmente l’espace ENTRE les deux boutons */
+        gap: 2rem;          
         justify-content: center;
     }
     .create-event-btn {
@@ -264,11 +249,30 @@
         color: white;
         font-weight: 600;
         cursor: pointer;
-        width: 100%; /* pour qu'il soit bien visible sous les autres */
+        width: 100%; 
         margin-top: 10px;
       }
       
       .create-event-btn:hover {
         background-color: #24776F;
       }
+      button:hover {
+        background-color: #0e312e !important;
+    }
+    .empty-message {
+        background: #e5f6f5; 
+        color: #24776F;
+        padding: 14px 20px;
+        border: 1px solid #299A8F;
+        border-radius: 12px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 25rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        animation: fadeIn 0.25s ease-out;
+    }
+
       
+    

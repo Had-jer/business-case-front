@@ -1,37 +1,37 @@
-/* ===== NAVBAR BACKGROUND ===== */
+/*  navbar background */
 .navbar-header {
   background-color: #4DB6AC;
   color: white;
 }
 
-/* ===== TITRE ===== */
+/*  titre */
 .navbar-title {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #0e312e !important;   /* ton vert foncé */
+  color: #0e312e !important;  
 }
 
-/* ===== BOUTONS ===== */
+/* boutons*/
 .navbar-btn {
   padding: 0.75rem 2rem;
-  background-color: white;        /* boutons blancs */
-  border: 2px solid #0e312e;      /* bordure verte */
-  color: #0e312e;                 /* texte vert */
+  background-color: white;        
+  border: 2px solid #0e312e;     
+  color: #0e312e;                 
   font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s ease;
 }
 
-/* Effet hover : texte blanc, fond vert */
+/*effet hover */
 .navbar-btn:hover {
   background-color: #0e312e;
   color: white;
 }
 
-/* ===== RESPONSIVE ===== */
+/* responsive  */
 
-/* MOBILE (max 640px) */
+/* MOBILE {max 640px} */
 @media (max-width: 640px) {
 
   header .container {
@@ -58,7 +58,7 @@
   }
 }
 
-/* TABLETTE (641px à 900px) */
+/* TABLETTE { 641px à 900px} */
 @media (min-width: 641px) and (max-width: 900px) {
   header .container {
     padding: 0 1rem;

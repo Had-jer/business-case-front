@@ -44,7 +44,7 @@ export class SinscrirePage {
       return;
     }
 
-    // Date correcte pour le backend (on ne modifie rien, format YYYY-MM-DD OK)
+    // Date format YYYY-MM-DD OK)
     let formattedDate = this.birthDate;
 
     const data = {
@@ -65,7 +65,8 @@ export class SinscrirePage {
     // Envoi à l'API
     this.api.register(data).subscribe({
       next: (response) => {
-        this.errorMessage = ""; // efface erreur précédente
+        // effacer erreur précédente
+        this.errorMessage = ""; 
         this.successMessage = "Inscription réussie ! Bienvenue 🎉";
 
         setTimeout(() => {
@@ -77,13 +78,13 @@ export class SinscrirePage {
         console.error("Erreur d'inscription :", err);
         this.successMessage = "";
 
-        // Cas email déjà utilisé
+        // CAS DE EMAIL DEJA UTILISÉ 
         if (err.status === 500 && err.error.detail?.includes("Duplicate entry")) {
           this.errorMessage = "Cet email est déjà utilisé. Veuillez en choisir un autre.";
           return;
         }
 
-        // Par défaut
+        // Message d'erreur par défaut 
         this.errorMessage = "Une erreur interne est survenue. Veuillez réessayer.";
       }
     });
@@ -92,87 +93,3 @@ export class SinscrirePage {
 
 
 
-
-
-// import { Component } from '@angular/core';
-// import { Router } from '@angular/router';
-// import { CommonModule } from '@angular/common';
-// import { FormsModule } from '@angular/forms';
-// import { Api } from '../../services/api';  // <-- import service API
-
-// @Component({
-//   selector: 'app-sinscrire',
-//   standalone: true,
-//   imports: [CommonModule, FormsModule],
-//   templateUrl: './sinscrire.html',
-//   styleUrls: ['./sinscrire.css']
-// })
-// export class SinscrirePage {
-//   firstName: string = '';
-//   lastName: string = '';
-//   birthDate: string = '';
-//   status: string = '';
-//   phone: string = '';
-//   email: string = '';
-//   password: string = '';
-//   confirmPassword: string = '';
-
-//   constructor(private router: Router, private api: Api) {}
-
- 
-
-//     const data = {
-//       firstName: this.firstName,
-//       lastName: this.lastName,
-//       birthDate: this.birthDate,
-//       status: this.status,
-//       phone: this.phone,
-//       email: this.email,
-//       password: this.password
-//     };
-
-
-
-//     onSubmit(event: Event) {
-//       // Pour ne pas refresh 
-//       event.preventDefault();
-//       if (this.password !== this.confirmPassword) {
-//         alert("Les mots de passe ne correspondent pas !");
-//         return;
-//       }
-//       // birthDate est déjà "YYYY-MM-DD"
-//       let formattedDate = this.birthDate;
-    
-//       // Si ton backend veut YYYY/MM/DD au lieu de YYYY-MM-DD :
-//       formattedDate = formattedDate.replace(/-/g, '/');
-    
-//       const data = {
-//         firstName: this.firstName,
-//         lastName: this.lastName,
-//         birthDate: formattedDate,
-//         status: this.status,
-//         phone: this.phone,
-//         email: this.email,
-//         password: this.password,
-//       };
-    
-//       console.log(data);
-//       // this.api.register(data).subscribe(...)
-//     }
-//     this.api.register(data).subscribe({
-//       next: (response) => {
-//         console.log("Inscription réussie !", response);
-
-//         // Optionnel : stocker un token si ton API en renvoie
-//         // localStorage.setItem('token', response.token);
-
-//         // Redirection vers les services ou espace membre
-//         this.router.navigate(['/services']);
-//       },
-//       error: (err) => {
-//         console.error("Erreur d'inscription :", err);
-//         alert("Une erreur est survenue lors de l'inscription.");
-//       }
-//     });
-//   }
-// }

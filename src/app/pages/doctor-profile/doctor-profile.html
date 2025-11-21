@@ -34,7 +34,7 @@
   
     </section>
   
-    <!-- 🔵 BOUTONS ACTIONS GLOBAL (en dehors de la card) -->
+    <!--  BOUTONS ACTIONS GLOBAL  -->
     <div class="doctor-actions">
         <button class="edit-btn" (click)="goEditProfile()">Modifier le profil</button>
         <button class="delete-btn" (click)="deleteAccount()">Supprimer compte</button>
@@ -48,7 +48,7 @@
 
   
     @if (medicalEvents.length === 0) {
-      <p class="empty">Aucun événement pour le moment.</p>
+      <p class="empty-message">Aucun événement pour le moment.</p>
     }
   
     @for (event of medicalEvents; track event.id) {
@@ -61,7 +61,7 @@
     }
   
   </section>
-  <!-- ==================== MODAL POPUP ==================== -->
+  <!--MODAL POPUP  -->
 @if (showPopup) {
     <div class="popup-overlay">
       <div class="popup-box">
@@ -70,9 +70,9 @@
     
         <label>Nouveau statut</label>
         <select [(ngModel)]="selectedStatus">
-          <option value="scheduled">Scheduled</option>
-          <option value="done">Done</option>
-          <option value="canceled">Canceled</option>
+            <option value="scheduled">Prévu</option>
+            <option value="done">Terminé</option>
+            <option value="canceled">Annulé</option>
         </select>
     
         <div class="popup-actions">

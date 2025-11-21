@@ -14,7 +14,7 @@
     </div>
   }
 
-  <h2>Inscrivez-Vous!</h2>
+  <h2 style="color:#de7970;">Inscrivez-vous !</h2>
 
   <form (submit)="onSubmit($event)">
 
@@ -22,14 +22,14 @@
     <div class="row">
       <input 
         type="text" 
-        placeholder="First Name" 
+        placeholder="Prénom" 
         name="firstName" 
         [(ngModel)]="firstName"
         required
       >
       <input 
         type="text" 
-        placeholder="Last Name" 
+        placeholder="Nom" 
         name="lastName" 
         [(ngModel)]="lastName"
         required
@@ -44,19 +44,19 @@
       required
     >
 
-    <!-- Status (Sélection) -->
+    <!-- Status -->
     <select 
       name="status" 
       [(ngModel)]="status"
       class="status-select"
       required
     >
-      <option value="" disabled selected>Status</option>
+      <option value="" disabled selected>Statut</option>
       <option value="patient">Patient</option>
-      <option value="doctor">Doctor</option>
+      <option value="doctor">Docteur</option>
     </select>
 
-    <!-- Speciality (affichée seulement si doctor est sélectionné) -->
+    <!-- Speciality (doctor only) -->
     @if (status === 'doctor') {
       <input
         type="text"
@@ -70,7 +70,7 @@
     <!-- Phone -->
     <input 
       type="tel" 
-      placeholder="Phone Number"
+      placeholder="Numéro de téléphone"
       name="phone"
       [(ngModel)]="phone"
       required
@@ -88,7 +88,7 @@
     <!-- Password -->
     <input 
       type="password"
-      placeholder="Password"
+      placeholder="Mot de passe"
       name="password"
       [(ngModel)]="password"
       required
@@ -97,7 +97,7 @@
     <!-- Confirm Password -->
     <input 
       type="password"
-      placeholder="Confirm Password"
+      placeholder="Confirmer le mot de passe"
       name="confirmPassword"
       [(ngModel)]="confirmPassword"
       required

@@ -2,19 +2,13 @@
 
   <h2>Bienvenue {{ user.last_name }}</h2>
 
-  <!-- 🚀 Layout 2 colonnes -->
+  <!-- Layout 2 colonnes -->
   <div class="profile-layout">
 
     <!--  Infos utilisateur -->
     <div class="left-column">
 
-      <div class="doctor-button-container">
-        @if (user.status === 'doctor') {
-          <button class="create-event-btn" (click)="goToMedicalEvent()">
-            Ajouter un événement médical
-          </button>
-        }
-      </div>
+     
 
       <!-- EMAIL -->
       <div class="profile-item">
@@ -32,21 +26,7 @@
         }
       </div>
 
-      <!-- PASSWORD -->
-      <div class="profile-item">
-        <label>Mot de passe</label>
-
-        @if (editingField !== 'password') {
-          <span>********</span>
-          <button class="modify-btn" (click)="editField('password')">Modifier</button>
-        }
-
-        @if (editingField === 'password') {
-          <input type="password" [(ngModel)]="newValue" />
-          <button class="ok-btn" (click)="saveField()">OK</button>
-          <button class="cancel-btn" (click)="cancelEdit()">Annuler</button>
-        }
-      </div>
+     
 
       <!-- PHONE -->
       <div class="profile-item">
@@ -85,7 +65,7 @@
       </div>
 
     </div>
-<!-- ==================== ÉVÉNEMENTS MÉDICAUX DU PATIENT ==================== -->
+<!-- ÉVÉNEMENTS MÉDICAUX DU PATIENT  -->
 <div class="events-section">
 
   <h3>Mes événements médicaux</h3>

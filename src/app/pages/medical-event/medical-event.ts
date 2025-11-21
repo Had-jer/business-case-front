@@ -39,7 +39,7 @@ export class MedicalEventPage {
         this.successMessage = "Événement créé avec succès ✔";
         this.errorMessage = "";
 
-        // ⏳ Redirection après un petit délai
+        // Redirection après un petit délai
         setTimeout(() => {
           console.log("REDIRECTION…");
           this.router.navigate(['/doctor/profile']);

@@ -33,12 +33,12 @@ export class DoctorProfile {
           this.medicalEvents = events;
         }
   
-        // Cas 2 : API Platform (hydra:member)
+        // Cas 2 : API Platform 
         else if (events["hydra:member"]) {
           this.medicalEvents = events["hydra:member"];
         }
   
-        // Cas 3 : Backend personnalisé { events: [...] }
+        // Backend personnalisé { events: [...] }
         else if (events.events) {
           this.medicalEvents = events.events;
         }
@@ -85,7 +85,7 @@ selectedStatus: string = '';
 openEditPopup(event: any) {
   this.showPopup = true;
   this.selectedEventId = event.id;
-  this.selectedStatus = event.status; // pré-remplir
+  this.selectedStatus = event.status; 
 }
 
 closePopup() {
